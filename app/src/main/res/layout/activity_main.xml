@@ -16,33 +16,63 @@
         android:textSize="10dp"
         android:textColor="@color/colorRed"></TextView>
 
+    <LinearLayout
+        android:id="@+id/segona_linea"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tv_seleccio"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_ss"
+            android:checkedButton="@+id/rb_so">
+
+        <RadioButton
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opcions de lletra " />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opcions de colors " />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/tv_ss"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/segona_linea"
         android:layout_marginBottom="10dp"
-        android:layout_below="@+id/tv_seleccio"
         android:text="Trieu el mode" />
+
     <RadioGroup
+        android:id="@+id/rg_opcions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_ss"
-        android:id="@+id/rg_opcions"
-        android:checkedButton="@+id/rb_so" >
+        android:checkedButton="@+id/rb_so">
+
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/rb_so"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="So" />
+
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/rb_vibracio"
-            android:text="Vibració" />
-        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Vibració" />
+
+        <RadioButton
             android:id="@+id/rb_silenci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Silenci" />
     </RadioGroup>
 
@@ -50,6 +80,7 @@
         android:id="@+id/btn_seleccio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/rb_silenci"
         android:layout_marginTop="200dp"
         android:text="APLICAR" />
 
