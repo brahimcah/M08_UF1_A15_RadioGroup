@@ -13,8 +13,8 @@
         android:gravity="center"
         android:padding="10dp"
         android:text="Configura'm"
-        android:textSize="10dp"
-        android:textColor="@color/colorRed"></TextView>
+        android:textColor="@color/colorRed"
+        android:textSize="30dp"></TextView>
 
     <LinearLayout
         android:id="@+id/segona_linea"
@@ -24,22 +24,29 @@
         android:orientation="horizontal"
         android:gravity="center"
         >
+
+
+
         <RadioGroup
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_ss"
-            android:checkedButton="@+id/rb_so">
+            android:orientation="horizontal"
+            android:checkedButton="@+id/rb_lletra">
 
-        <RadioButton
-            android:layout_marginRight="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Opcions de lletra " />
+            <RadioButton
+                android:id="@+id/rb_colores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opcions de colors  " />
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Opcions de colors " />
+            <RadioButton
+                android:id="@+id/rb_lletra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opcions de lletra " />
+        </RadioGroup>
     </LinearLayout>
 
     <TextView
@@ -47,41 +54,52 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/segona_linea"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="10dp"
-        android:text="Trieu el mode" />
+        android:text="Tria la mesura de lletra" />
 
     <RadioGroup
         android:id="@+id/rg_opcions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_ss"
-        android:checkedButton="@+id/rb_so">
+        android:checkedButton="@+id/rb_MP">
 
         <RadioButton
-            android:id="@+id/rb_so"
+            android:id="@+id/rb_mp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="So" />
+            android:text="Molt Petits " />
 
         <RadioButton
-            android:id="@+id/rb_vibracio"
+            android:id="@+id/rb_r"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Vibració" />
+            android:text="Petits " />
 
         <RadioButton
-            android:id="@+id/rb_silenci"
+            android:id="@+id/rb_m"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Silenci" />
+            android:text="Mitjans " />
+        <RadioButton
+            android:id="@+id/rb_g"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grans " />
+        <RadioButton
+            android:id="@+id/rb_mg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Molt Grans " />
     </RadioGroup>
 
     <Button
         android:id="@+id/btn_seleccio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rb_silenci"
-        android:layout_marginTop="200dp"
+        android:layout_below="@+id/rg_opcions"
+        android:layout_marginTop="50dp"
         android:text="APLICAR" />
 
 </RelativeLayout>
